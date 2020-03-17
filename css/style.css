@@ -8,9 +8,6 @@
   font-size: 16px;
 }
 
-html {
-}
-
 body {
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
@@ -56,6 +53,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  z-index: 1000;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 nav li {
@@ -71,6 +74,11 @@ nav img {
   max-width: 13rem;
 }
 
+.fas {
+  display: none;
+  font-size: 2rem;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -81,7 +89,7 @@ main {
   max-width: 1200px;
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   display: inline-flex;
   margin-top: 8rem;
 }
@@ -96,15 +104,19 @@ aside {
 
 .phone-pics {
   width: 50%;
+  height: 100%;
+  margin-bottom: 2rem;
 }
 
 .pics {
   width: 100%;
   position: relative;
+  height: 100%;
 }
 
 .pics img {
   max-height: 600px;
+  max-width: 50vw;
 }
 
 .phone1 {
@@ -114,7 +126,7 @@ aside {
 }
 
 .phone2 {
-  z-index: 1000;
+  z-index: 100;
   position: absolute;
   top: 1rem;
 }
@@ -122,6 +134,7 @@ aside {
 .button-holder {
   display: inline-flex;
   width: 100%;
+  justify-content: space-between;
 }
 
 .button-holder button {
@@ -137,4 +150,40 @@ aside {
 
 .button-holder button:nth-child(even) {
   background-color: #3498db;
+}
+
+@media only screen and (max-width: 825px) {
+  .button-holder button {
+    font-size: 0.8rem;
+  }
+
+  aside {
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  nav ul {
+    display: none;
+  }
+
+  .fas {
+    display: block;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  aside,
+  .phone-pics {
+    width: 100%;
+  }
+
+  aside {
+    margin: 2rem 0 4rem 0;
+    padding: 0;
+  }
 }
