@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+nav ul {
+}
+
+nav li {
+  list-style-type: none;
+  width: 100%;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  display: inline;
+}
+
+nav img {
+  max-width: 13rem;
+}
+
+main {
+  max-width: 1200px;
+  padding: 2rem;
+  margin-top: 8rem;
+  display: inline-flex;
+}
+
+aside {
+  width: 50%;
+}
+
+figure {
+  width: 50%;
+  position: relative;
+}
+
+figure img {
+  max-height: 600px;
+}
+
+.phone1 {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+}
+
+.phone2 {
+  z-index: 1000;
+  position: absolute;
+  top: 1rem;
+}
