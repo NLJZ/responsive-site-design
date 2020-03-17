@@ -44,7 +44,7 @@ p {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   max-width: 1200px;
@@ -54,11 +54,6 @@ nav {
   align-items: center;
   padding: 2rem;
   z-index: 1000;
-  background-image: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 nav li {
