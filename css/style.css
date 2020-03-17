@@ -166,7 +166,7 @@ aside {
     display: block;
   }
 
-  main {
+  .fas:onc main {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
