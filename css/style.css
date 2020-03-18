@@ -87,6 +87,7 @@ main {
   padding: 2rem 2rem 0 2rem;
   display: inline-flex;
   margin-top: 8rem;
+  flex-wrap: wrap;
 }
 
 aside {
@@ -164,13 +165,6 @@ aside {
 
   .fas {
     display: block;
-  }
-
-  .fas main {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-    flex-
   }
 
   aside,
