@@ -1,3 +1,5 @@
+/* sitewide styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -43,6 +45,8 @@ p {
   padding-bottom: 2.5rem;
 }
 
+/* navigation */
+
 nav {
   position: absolute;
   top: 0;
@@ -74,6 +78,8 @@ nav img {
   font-size: 2rem;
 }
 
+/* main content area */
+
 .container {
   width: 100%;
   display: flex;
@@ -102,12 +108,16 @@ aside {
   width: 50%;
   height: 100%;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .pics {
   width: 100%;
   position: relative;
   height: 100%;
+  min-width: 418px;
+  max-width: 510px;
 }
 
 .pics img {
@@ -148,17 +158,18 @@ aside {
   background-color: #3498db;
 }
 
+/* responsive behavior on smaller screens */
+
 @media only screen and (max-width: 825px) {
   .button-holder button {
     font-size: 0.8rem;
   }
-
-  aside {
-    margin-top: 4rem;
-  }
 }
 
 @media only screen and (max-width: 750px) {
+  main {
+    margin-top: 11rem;
+  }
   nav img {
     max-width: 50%;
   }
@@ -178,5 +189,18 @@ aside {
   aside {
     margin: 2rem 0 4rem 0;
     padding: 0;
+  }
+
+  @media only screen and (max-width: 450px) {
+    main {
+      margin-top: 6rem;
+    }
+
+    .pics {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      min-width: 80vw;
+    }
   }
 }
