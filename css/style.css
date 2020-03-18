@@ -171,7 +171,7 @@ aside {
     margin-top: 11rem;
   }
   nav img {
-    max-width: 50%;
+    width: 50%;
   }
   nav ul {
     display: none;
