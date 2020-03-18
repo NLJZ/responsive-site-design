@@ -166,10 +166,11 @@ aside {
     display: block;
   }
 
-  .fas:onc main {
+  .fas main {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+    flex-
   }
 
   aside,
