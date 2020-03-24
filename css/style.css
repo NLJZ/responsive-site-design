@@ -221,7 +221,7 @@ aside {
   }
 
   .phone1 {
-    right: 0
+    right: 0;
   }
 }
 
@@ -231,17 +231,16 @@ aside {
   }
 }
 
-  @media only screen and (max-width: 450px) {
-    main {
-      margin-top: 5rem;
-    }
+@media only screen and (max-width: 450px) {
+  main {
+    margin-top: 5rem;
+  }
 
-    .pics {
-      width: 100%;
-      position: relative;
-      height: 100%;
-      min-width: 80vw;
-      padding-bottom: 100%;
-    }
+  .pics {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    min-width: 80vw;
+    padding-bottom: 100%;
   }
 }
