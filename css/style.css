@@ -27,6 +27,18 @@ body {
   color: #fff;
 }
 
+a:hover,
+a:active,
+a:focus,
+input:hover,
+input:active,
+input:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: 0;
+}
+
 a {
   color: #fff;
   text-decoration: none;
