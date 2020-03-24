@@ -45,9 +45,18 @@ p {
   padding-bottom: 2.5rem;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
 /* navigation */
 
-nav {
+/* top-nav bar */
+
+.large-nav {
   position: absolute;
   top: 0;
   width: 100%;
@@ -62,7 +71,6 @@ nav {
 
 nav li {
   list-style-type: none;
-  width: 100%;
   font-size: 1rem;
   text-transform: uppercase;
   padding-left: 1rem;
@@ -73,11 +81,9 @@ nav img {
   max-width: 13rem;
 }
 
-.hamburger {
+#hamburger {
   display: none;
-  font-size: 2rem;
-  width: 2rem;
-  height: 2rem;
+  font-size: 10px;
 }
 
 .line-holder {
@@ -86,11 +92,73 @@ nav img {
   justify-content: space-around;
   height: 100%;
   width: 100%;
+  width: 4em;
+  height: 3em;
+  position: relative;
 }
 
 .line {
   height: 0.2rem;
+  width: 100%;
   background-color: lightgray;
+}
+
+#one,
+#two,
+#three {
+  position: absolute;
+}
+
+#one {
+  top: 0;
+}
+
+#two {
+  opacity: 1;
+}
+
+#three {
+  bottom: 0;
+}
+
+.animate.cross-paths-into-x#one {
+  animation-name: cross-paths-into-x-one;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.animate.cross-paths-into-x#two {
+  animation-name: cross-paths-into-x-two;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.animate.cross-paths-into-x#three {
+  animation-name: cross-paths-into-x-three;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+/* slide-in nav */
+
+#slide-in-menu {
+  position: absolute;
+  right: -90rem;
+  top: -1rem;
+  margin-right: 2rem;
+  background-color: rgba(25, 25, 25, 0.8);
+  padding: 1rem 1rem 0 1rem;
+  z-index: 1000;
+  display: none;
+}
+
+#slide-in-menu li {
+  display: block;
+  text-align: right;
+  padding-bottom: 1rem;
 }
 
 /* main content area */
@@ -109,6 +177,8 @@ main {
   display: inline-flex;
   margin-top: 8rem;
   flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
 }
 
 aside {
@@ -116,7 +186,7 @@ aside {
   display: flex;
   flex-direction: column;
   padding-right: 5rem;
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 
 .phone-pics {
@@ -183,17 +253,16 @@ aside {
 
 @media only screen and (max-width: 750px) {
   main {
-    margin-top: 11rem;
     flex-wrap: wrap-reverse;
   }
-  nav img {
+  .large-nav img {
     width: 50%;
   }
-  nav ul {
+  .large-nav ul {
     display: none;
   }
 
-  .hamburger {
+  #hamburger {
     display: block;
   }
 
@@ -204,15 +273,12 @@ aside {
   }
 
   .pics {
-    padding-bottom: 80%;
+    padding-bottom: 85%;
     margin: 0 auto;
   }
+
   .phone-pics {
     display: inline-block;
-  }
-
-  .phone-pics img {
-    /* max-height: 380px; */
   }
 
   aside {
@@ -231,7 +297,7 @@ aside {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 449px) {
   main {
     margin-top: 5rem;
   }
@@ -242,5 +308,45 @@ aside {
     height: 100%;
     min-width: 80vw;
     padding-bottom: 100%;
+  }
+
+  .phone-pics {
+    margin-top: 2rem;
+  }
+}
+
+/* animation keyframes */
+
+@keyframes cross-paths-into-x-one {
+  from {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  to {
+    top: 1.4em;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes cross-paths-into-x-two {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes cross-paths-into-x-three {
+  from {
+    bottom: 0;
+    transform: rotate(0deg);
+  }
+
+  to {
+    bottom: 1.2em;
+    transform: rotate(-135deg);
   }
 }

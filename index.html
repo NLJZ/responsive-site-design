@@ -12,11 +12,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/small-devices.css" />
     <title>Responsive Site Design</title>
   </head>
   <body>
-    <nav>
+    <nav class="large-nav">
       <img src="img/logo.png" />
       <div id="menu">
         <ul>
@@ -28,16 +27,48 @@
           <li><a href="#">sign up</a></li>
         </ul>
       </div>
-      <div class="hamburger">
+      <button id="hamburger">
         <div class="line-holder">
-          <div class="line one"></div>
-          <div class="line two"></div>
-          <div class="line three"></div>
+          <div class="line cross-paths-into-x" id="one"></div>
+          <div class="line cross-paths-into-x" id="two"></div>
+          <div class="line cross-paths-into-x" id="three"></div>
         </div>
-      </div>
+      </button>
     </nav>
+    <script>
+      hamburger.onclick = function() {
+        console.log("yo");
+        document.getElementById("one");
+        document.getElementById("two");
+        document.getElementById("three");
+        var slide = document.getElementById("slide-in-menu");
+        if (one.classList.contains("animate") == false) {
+          one.classList.add("animate");
+          two.classList.add("animate");
+          three.classList.add("animate");
+          slide.style.right = "0";
+          slide.style.display = "block";
+        } else {
+          one.classList.remove("animate");
+          two.classList.remove("animate");
+          three.classList.remove("animate");
+          slide.style.right = "-90rem";
+          slide.style.display = "none";
+        }
+      };
+    </script>
     <div class="container">
       <main>
+        <nav id="slide-in-menu">
+          <ul>
+            <li><a href="#">products</a></li>
+            <li><a href="#">prices</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">team</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">sign up</a></li>
+          </ul>
+        </nav>
         <aside>
           <h1>Make your Startup web with our template.</h1>
           <p>
