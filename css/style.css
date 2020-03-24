@@ -7,7 +7,7 @@
 }
 
 :root {
-  font-size: 10px;
+  font-size: 16px;
 }
 
 body {
@@ -37,13 +37,12 @@ a:hover {
 }
 
 h1 {
-  font-size: 4rem;
-  padding-bottom: 4rem;
+  font-size: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 p {
-  padding-bottom: 4rem;
-  font-size: 1.6rem;
+  padding-bottom: 2.5rem;
 }
 
 /* navigation */
@@ -57,32 +56,32 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 3.2rem;
+  padding: 2rem;
   z-index: 1000;
 }
 
 nav li {
   list-style-type: none;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  padding-left: 1.6rem;
+  padding-left: 1rem;
   display: inline;
 }
 
 nav img {
-  max-width: 20.8rem;
+  max-width: 13rem;
 }
 
 .hamburger {
   display: none;
-  width: 3rem;
-  height: 3rem;
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .line-holder {
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
@@ -90,7 +89,7 @@ nav img {
 }
 
 .line {
-  height: 0.3rem;
+  height: 0.2rem;
   background-color: lightgray;
 }
 
@@ -106,9 +105,9 @@ main {
   max-width: 1200px;
   width: 100%;
   height: 100%;
-  padding: 3.2rem 3.2rem 0 3.2rem;
+  padding: 2rem 2rem 0 2rem;
   display: inline-flex;
-  margin-top: 12.8rem;
+  margin-top: 8rem;
   flex-wrap: wrap;
 }
 
@@ -116,14 +115,14 @@ aside {
   width: 50%;
   display: flex;
   flex-direction: column;
-  padding-right: 8rem;
-  margin-top: 11.2rem;
+  padding-right: 5rem;
+  margin-top: 7rem;
 }
 
 .phone-pics {
   width: 50%;
   height: 100%;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -144,13 +143,13 @@ aside {
 .phone1 {
   position: absolute;
   top: 0;
-  right: 4.8rem;
+  right: 3rem;
 }
 
 .phone2 {
   z-index: 100;
   position: absolute;
-  top: 1.6rem;
+  top: 1rem;
 }
 
 .button-holder {
@@ -161,13 +160,13 @@ aside {
 
 .button-holder button {
   width: 40%;
-  height: 4.8rem;
-  font-size: 1.9rem;
+  height: 3rem;
+  font-size: 1.2rem;
   background-color: #29be56;
   border: 0;
   color: #fff;
-  margin-right: 1.9rem;
-  border-radius: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
 }
 
 .button-holder button:nth-child(even) {
@@ -178,13 +177,13 @@ aside {
 
 @media only screen and (max-width: 825px) {
   .button-holder button {
-    font-size: 1.7rem;
+    font-size: 0.8rem;
   }
 }
 
 @media only screen and (max-width: 750px) {
   main {
-    margin-top: 17.6rem;
+    margin-top: 11rem;
     flex-wrap: wrap-reverse;
   }
   nav img {
@@ -205,22 +204,36 @@ aside {
   }
 
   .pics {
-    min-height: 44rem;
+    padding-bottom: 80%;
+    margin: 0 auto;
+  }
+  .phone-pics {
+    display: inline-block;
+  }
+
+  .phone-pics img {
+    /* max-height: 380px; */
   }
 
   aside {
-    margin: 3.2rem 0 6.4rem 0;
+    margin: 2rem 0 4rem 0;
     padding: 0;
   }
 
   .phone1 {
-    right: 0;
+    right: 0
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  h1 {
+    margin-top: 3rem;
   }
 }
 
   @media only screen and (max-width: 450px) {
     main {
-      margin-top: 9.6rem;
+      margin-top: 5rem;
     }
 
     .pics {
@@ -228,10 +241,7 @@ aside {
       position: relative;
       height: 100%;
       min-width: 80vw;
+      padding-bottom: 100%;
     }
-
-
-
-
   }
 }
