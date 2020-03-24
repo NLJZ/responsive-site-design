@@ -154,6 +154,27 @@ nav img {
   animation-timing-function: ease-in-out;
 }
 
+.rev-animate.cross-paths-into-x#one {
+  animation-name: rev-cross-paths-into-x-one;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.rev-animate.cross-paths-into-x#two {
+  animation-name: rev-cross-paths-into-x-two;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+.rev-animate.cross-paths-into-x#three {
+  animation-name: rev-cross-paths-into-x-three;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
 /* slide-in nav */
 
 #slide-in-menu {
@@ -162,15 +183,38 @@ nav img {
   top: -1rem;
   margin-right: 2rem;
   background-color: rgba(25, 25, 25, 0.8);
-  padding: 1rem 1rem 0 1rem;
   z-index: 1000;
   display: none;
+}
+
+#slide-in-menu ul {
+  padding: 0 3rem 0 0;
 }
 
 #slide-in-menu li {
   display: block;
   text-align: right;
   padding-bottom: 1rem;
+}
+
+#slide-in-menu.slide {
+  display: block;
+  right: -10rem;
+  opacity: 0;
+  animation-name: slide-in-nav;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#slide-in-menu.rev-slide {
+  display: block;
+  right: -10;
+  animation-name: rev-slide-in-nav;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
 }
 
 /* main content area */
@@ -360,5 +404,67 @@ aside {
   to {
     bottom: 1.2em;
     transform: rotate(-135deg);
+  }
+}
+
+@keyframes rev-cross-paths-into-x-one {
+  from {
+    top: 1.4em;
+    transform: rotate(135deg);
+  }
+
+  to {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rev-cross-paths-into-x-two {
+  0% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rev-cross-paths-into-x-three {
+  from {
+    bottom: 1.2em;
+    transform: rotate(-135deg);
+  }
+
+  to {
+    bottom: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slide-in-nav {
+  from {
+    right: -90rem;
+    opacity: 0;
+  }
+
+  to {
+    right: -2rem;
+    opacity: 1;
+  }
+}
+
+@keyframes rev-slide-in-nav {
+  from {
+    right: -2rem;
+    opacity: 1;
+  }
+
+  to {
+    right: -90rem;
+    opacity: 0;
   }
 }

@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/75f6c89321.js"
-      crossorigin="anonymous"
-    ></script>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
@@ -46,20 +42,26 @@
           one.classList.add("animate");
           two.classList.add("animate");
           three.classList.add("animate");
-          slide.style.right = "0";
-          slide.style.display = "block";
+          one.classList.remove("rev-animate");
+          two.classList.remove("rev-animate");
+          three.classList.remove("rev-animate");
+          slide.classList.add("slide");
+          slide.classList.remove("rev-slide");
         } else {
           one.classList.remove("animate");
           two.classList.remove("animate");
           three.classList.remove("animate");
-          slide.style.right = "-90rem";
-          slide.style.display = "none";
+          one.classList.add("rev-animate");
+          two.classList.add("rev-animate");
+          three.classList.add("rev-animate");
+          slide.classList.remove("slide");
+          slide.classList.add("rev-slide");
         }
       };
     </script>
     <div class="container">
       <main>
-        <nav id="slide-in-menu">
+        <nav id="slide-in-menu" class="slider">
           <ul>
             <li><a href="#">products</a></li>
             <li><a href="#">prices</a></li>
@@ -91,5 +93,21 @@
         </section>
       </main>
     </div>
+    <script>
+      var slide = document.getElementById("slide-in-menu");
+      document.getElementById("one");
+      document.getElementById("two");
+      document.getElementById("three");
+      window.addEventListener("resize", function() {
+        if (window.innerWidth > 750)
+          slide.classList.remove("slide"),
+            one.classList.remove("animate"),
+            two.classList.remove("animate"),
+            three.classList.remove("animate"),
+            one.classList.remove("rev-animate"),
+            two.classList.remove("rev-animate"),
+            three.classList.remove("rev-animate");
+      });
+    </script>
   </body>
 </html>
